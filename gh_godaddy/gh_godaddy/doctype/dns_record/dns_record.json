@@ -1,0 +1,80 @@
+{
+ "actions": [],
+ "autoname": "field:id",
+ "creation": "2024-01-01 09:47:59.432217",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "id",
+  "data",
+  "column_break_luip",
+  "type",
+  "ttl"
+ ],
+ "fields": [
+  {
+   "fieldname": "data",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Data(IP Address)",
+   "read_only_depends_on": "eval:doc.data != null",
+   "reqd": 1
+  },
+  {
+   "description": "Let it be in seconds.",
+   "fieldname": "ttl",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "TTL",
+   "read_only_depends_on": "eval:doc.ttl != null",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_luip",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "\nA\nAAAA\nCNAME\nMX\nCAA\nCRV\nNS\nTXT\nHTTPS",
+   "reqd": 1
+  },
+  {
+   "description": "Name of record",
+   "fieldname": "id",
+   "fieldtype": "Data",
+   "label": "ID",
+   "read_only_depends_on": "eval:doc.id != null",
+   "reqd": 1,
+   "unique": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_virtual": 1,
+ "links": [],
+ "modified": "2024-01-01 23:48:58.925381",
+ "modified_by": "Administrator",
+ "module": "Gh Godaddy",
+ "name": "DNS Record",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
