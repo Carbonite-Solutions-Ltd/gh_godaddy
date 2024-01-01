@@ -4,4 +4,4 @@ Create DNS records with Godaddy API
 
 #### License
 
-mit
+mit# gh_godaddy
